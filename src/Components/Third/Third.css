@@ -1,0 +1,50 @@
+.container-shape3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.container-inner-shape3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: end;
+}
+
+
+
+.shape3 {
+    
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    margin-right: 3%;
+    width: 5%;
+    height: 5vmin;
+    background-color: rgb(174, 0, 209);
+    transition: all 0.7s ease-in-out;
+    animation: bounce3 2s infinite;
+}
+
+.shape3.hovered {
+    animation: none;
+    width: 50%;
+    height: 20vmin;
+    background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(78, 10, 109, 0.055));
+    border-left: 1px solid rgba(167, 231, 236);
+    margin-top: 1%;
+    clip-path: polygon(6% 14%, 77% 9%, 83% 42%, 7% 50%);
+  }
+
+
+
+
+
+@keyframes bounce3 {
+    0%, 100% {
+      transform: translateX(10%);
+    }
+    50% {
+      transform: translateX(0%);
+    }
+  }
+
