@@ -1,0 +1,38 @@
+.container-shape2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.shape2 {
+    clip-path: circle(2.8% at 50% 50%);
+    width: 50%;
+    height: 10vmin;
+    background-color: rgb(167, 231, 236);
+    transition: all 0.7s ease-in-out;
+    animation: bounce2 2s infinite;
+}
+
+.shape2.hovered {
+    animation: none;
+    width: 50%;
+    height: 20vmin;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(78, 10, 109, 0.055));
+    border-left: 1px solid rgba(167, 231, 236);
+    margin-top: 1%;
+  }
+
+
+
+
+
+@keyframes bounce2 {
+    0%, 100% {
+      transform: translateY(10%);
+    }
+    50% {
+      transform: translateY(-10%);
+    }
+  }
+
