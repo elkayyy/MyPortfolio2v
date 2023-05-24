@@ -2,8 +2,35 @@
   box-sizing: border-box;
 }
 
+
+HTML,
 body {
-  background: linear-gradient(to right, #050d1a, #16235a, #4e106b);
-  
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, rgba(5, 13, 26), rgba(22, 35, 90), rgba(78, 16, 107));
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(228, 228, 228)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #72337a;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b973fa;
+}
