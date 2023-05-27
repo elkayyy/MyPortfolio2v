@@ -1,8 +1,8 @@
 import React from 'react'
-import './Third.css'
+import './FloorAnimation.css'
 
 
-const Third = ({variable}) => {
+const FloorAnimation = ({variable}) => {
     return (
         <div className='container-shape3'>
                 <div className='shape3'
@@ -26,4 +26,4 @@ const Third = ({variable}) => {
     )
 }
 
-export default Third
+export default FloorAnimation

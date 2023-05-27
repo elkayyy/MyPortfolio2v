@@ -1,23 +1,27 @@
 import './App.css';
 import Background from './Components/Background/Background';
-import First from './Components/First/First';
-import Fourth from './Components/Fourth/Fourth';
-import Second from './Components/Second/Second';
+import Introduction from './Components/Introduction/Introduction';
+import MySkills from './Components/MySkills/MySkills';
+import AboutMe from './Components/AboutMe/AboutMe';
 import Social from './Components/Social/Social';
-import Third from './Components/Third/Third';
+import FloorAnimation from './Components/FloorAnimation/FloorAnimation';
+import ProjectOne from './Components/ProjectOne/ProjectMain/ProjectOne';
 
 
 function App() {
   return (
      <>
   <Social/>
-  <First/>
-  <Third variable={1.5}/>
-  <Second/>
+  <Introduction/>
+  <FloorAnimation variable={1.5}/>
+  <AboutMe/>
   <Background/>
-  <Third variable={1.7}/>
-  <Fourth/>
-  <Third variable={2}/>
+  <FloorAnimation variable={1.7}/>
+  <MySkills/>
+  <FloorAnimation variable={2}/>
+  <ProjectOne/>
+  <FloorAnimation variable={2.3}/>
+
   
 
     

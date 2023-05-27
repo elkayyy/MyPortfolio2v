@@ -1,8 +1,8 @@
 import React from 'react'
-import './Fourth.css'
+import './MySkills.css'
 import { useState } from 'react'
 
-const Fourth = () => {
+const MySkills = () => {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -52,4 +52,4 @@ const Fourth = () => {
     )
 }
 
-export default Fourth
+export default MySkills

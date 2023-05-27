@@ -1,8 +1,8 @@
 import React from 'react'
-import './Second.css'
+import './AboutMe.css'
 import { useState } from 'react';
 
-const Second = () => {
+const AboutMe = () => {
 
     const [isHovered, setIsHovered] = useState(false);
   
@@ -22,4 +22,4 @@ const Second = () => {
     )
 }
 
-export default Second
+export default AboutMe

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './First.css';
+import './Introduction.css';
 
-const First = () => {
+const Introduction = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -22,4 +22,4 @@ const First = () => {
   );
 };
 
-export default First;
+export default Introduction;

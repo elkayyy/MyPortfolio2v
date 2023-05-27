@@ -1,0 +1,92 @@
+.project-container-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+  }
+
+.shape5 {
+    display: flex;
+    justify-content: space-evenly;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    width: 3%;
+    height: 5vmin;
+    background-color: rgb(246, 255, 197);
+    transition: all 0.7s ease-in-out;
+    animation: bounce2 2s infinite;
+}
+
+.shape5.hovered {
+    animation: none;
+    padding: 2%;
+    height: auto;
+    width: 50%;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(78, 10, 109, 0.055));
+
+  }
+
+  .shape5 .label  {
+    display: none;
+  }
+  
+  .shape5.hovered .label {
+    display: unset;
+  }
+
+.project-main-login {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+
+.main-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.login, .password {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  border-bottom: 1px solid rgba(156, 255, 153, 0.418);
+  width: 35%;
+}
+
+input  {
+  border: none;
+  background-color: inherit;
+  text-align: center;
+  font-family: monospace;
+  color: rgb(195, 255, 200);
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+  outline: none;
+  background-color: inherit;
+  width: 100%;
+  color: rgb(195, 255, 200);
+}
+
+.login:focus-within label, .password:focus-within label {
+  transform: translateY(-10px);
+}
+.login label {
+  display: flex;
+  justify-content: center;
+  color: rgb(195, 255, 200);
+  transition: all 0.3s ease;
+
+}
+
+.password label{
+  display: flex;
+  justify-content: center;
+  color: rgb(195, 255, 200);
+  transition: all 0.3s ease;
+}
+
