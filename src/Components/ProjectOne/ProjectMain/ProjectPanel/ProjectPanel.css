@@ -1,0 +1,109 @@
+.project-panel-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .project-panel-opened {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1%;
+    gap: 1em;
+    background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(163, 255, 228, 0.055));
+    animation: expandOut 0.8s ease-out forwards;
+  }
+
+  .welcome-panel, .text-panel, .logged-in, .user-list, .write, .del{
+    font-family: monospace;
+    color: rgb(195, 255, 200);
+  }
+
+  .user-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .logged-in{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .welcome-panel{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+  }
+
+.container-1{
+    padding: 1%;
+    border-right: 1px solid rgb(195, 255, 200); ;
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.container-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    border-left: 1px solid rgb(195, 255, 200);
+    gap: 1em;
+ }
+
+  .logout-btn{
+    border: none;
+    background-color: inherit;
+    color: rgb(159, 231, 165);
+    width: 5em;
+    font-family: monospace;  
+    box-shadow: 0 0 10px rgba(188, 250, 193, 0.4);
+  }
+
+  .db-write-del{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .write, .del {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2em;
+    
+  }
+
+  .login-db, .password-db, .remove-db {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border-bottom: 1px solid rgba(156, 255, 153, 0.418);
+    width: 100%;
+  }
+
+  .del-write{
+    color: rgb(212, 166, 255);
+  }
+
+  @keyframes expandOut {
+    0% {
+      width: 0;
+      height: 0;
+    }
+    100% {
+      width: 50%;
+      height: auto;
+    }
+  }
+  

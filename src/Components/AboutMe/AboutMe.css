@@ -36,12 +36,6 @@
     margin-top: 1%;
   }
 
-  .shape2.hovered:hover {
-    scale: 1.1;
-  }
-   
-
-
 @keyframes bounce2 {
     0%, 100% {
       transform: translateY(10%);

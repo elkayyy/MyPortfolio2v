@@ -11,7 +11,7 @@
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     width: 3%;
     height: 5vmin;
-    background-color: rgb(246, 255, 197);
+    background-color: rgb(156, 233, 133);
     transition: all 0.7s ease-in-out;
     animation: bounce2 2s infinite;
 }
@@ -89,4 +89,47 @@ input[type="text"]:focus, input[type="password"]:focus {
   color: rgb(195, 255, 200);
   transition: all 0.3s ease;
 }
+
+.main-btn{
+  border: none;
+  background-color: inherit;
+  color: rgb(159, 231, 165);
+  width: 5em;
+  font-family: monospace;  
+  box-shadow: 0 0 10px rgba(188, 250, 193, 0.4);
+}
+
+.main-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.log-fail{
+  display: flex;
+  flex-direction: row;
+  border: none;
+  background-color: inherit;
+  color: rgb(231, 179, 159);
+  width: 15em;
+  font-family: monospace;  
+  box-shadow: 0 0 10px rgba(188, 250, 193, 0.4);
+  animation: loginFailed 1s;
+}
+
+
+.main-btn:hover {
+  animation: lightGlow 1s infinite alternate;
+}
+
+@keyframes loginFailed {
+  0% {
+   opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 
