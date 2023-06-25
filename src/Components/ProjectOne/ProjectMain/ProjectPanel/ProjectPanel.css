@@ -23,6 +23,7 @@
     flex-direction: column;
     align-items: center;
     gap: 1em;
+    
   }
 
   .logged-in{
@@ -46,7 +47,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1em;
+    gap: 3em;
 }
 
 .container-3 {
@@ -109,6 +110,13 @@
     color: rgb(255, 159, 135);
   }
 
+  .delete-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
+
 
 
 
@@ -123,7 +131,6 @@
     }
   }
   
-
   .fade-in {
     animation: fadeInAnimation 0.3s ease-in;
   }
@@ -134,6 +141,13 @@
     }
     100% {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .db-write-del{
+      display: flex;
+      flex-direction: column;
     }
   }
   

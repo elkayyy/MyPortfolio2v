@@ -23,19 +23,22 @@ export const readFromDatabase = async () => {
   return users;
 };
 
-export const writeToDatabase = async (login, password) => {
+export const writeToDatabase = async (login, password , dateAdded) => {
   const usersRef = ref(db, '/');
   const snapshot = await get(usersRef);
 
   const users = Object.values(snapshot.val());
   const isDuplicate = users.some((user) => user.login === login);
-
+  
   if (!isDuplicate) {
     const userId = uid();
+    const date = new Date();
+    const dateString = date.toLocaleDateString() + " " + date.toLocaleTimeString();
     set(ref(db, `/${userId}`), {
       login,
       password,
       userId,
+      dateString
     });
   }
 };
