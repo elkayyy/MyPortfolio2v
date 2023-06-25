@@ -9,6 +9,7 @@ const ProjectOne = () => {
   const [password, setPassword] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loginFailed, setLoginFailed] = useState(false);
+  const [loginFailKey, setLoginFailKey] = useState(0);
 
   const handleCheckCredentials = () => {
 
@@ -16,6 +17,9 @@ const ProjectOne = () => {
       .then((res) => {
         setIsAuthenticated(res);
         setLoginFailed(!res);
+        if (!res) {
+          setLoginFailKey(prevKey => prevKey + 1); 
+        }
 
       })
       .catch((error) => {
@@ -60,7 +64,7 @@ const ProjectOne = () => {
                   <button className='main-btn' onClick={handleCheckCredentials}>
                     Confirm
                   </button>
-                  {loginFailed && <div className='log-fail'>Login failed. Please try again.</div>}
+                  {loginFailed && <div key={loginFailKey} className='log-fail'>Login failed. Please try again.</div>}
                 </div>
 
 

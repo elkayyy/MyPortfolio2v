@@ -6,8 +6,7 @@
   
   .project-panel-opened {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     padding: 1%;
     gap: 1em;
     background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(163, 255, 228, 0.055));
@@ -55,7 +54,6 @@
     flex-direction: column;
     align-items: center;
     padding: 1%;
-    border-left: 1px solid rgb(195, 255, 200);
     gap: 1em;
  }
 
@@ -71,7 +69,8 @@
   .db-write-del{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-evenly;
     gap: 1.5em;
   }
 
@@ -92,9 +91,26 @@
     width: 100%;
   }
 
-  .del-write{
-    color: rgb(212, 166, 255);
+  .tableData {
+   width: 100%;
   }
+
+  tr {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  input::placeholder{
+    color: rgba(234, 212, 255, 0.466);
+  }
+
+  .del-msg , .write-msg{
+    color: rgb(255, 159, 135);
+  }
+
+
+
 
   @keyframes expandOut {
     0% {
@@ -104,6 +120,20 @@
     100% {
       width: 50%;
       height: auto;
+    }
+  }
+  
+
+  .fade-in {
+    animation: fadeInAnimation 0.3s ease-in;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
   
