@@ -23,7 +23,7 @@ export const readFromDatabase = async () => {
   return users;
 };
 
-export const writeToDatabase = async (login, password , dateAdded) => {
+export const writeToDatabase = async (login, password) => {
   const usersRef = ref(db, '/');
   const snapshot = await get(usersRef);
 

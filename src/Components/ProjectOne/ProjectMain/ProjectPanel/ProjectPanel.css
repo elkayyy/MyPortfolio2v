@@ -10,8 +10,13 @@
     padding: 1%;
     gap: 1em;
     background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(163, 255, 228, 0.055));
-    animation: expandOut 0.8s ease-out forwards;
+    width: 50%;
+    transform: scale(0.1);
+    animation: zoomIn 0.3s forwards; 
   }
+
+
+
 
   .welcome-panel, .text-panel, .logged-in, .user-list, .write, .del{
     font-family: monospace;
@@ -40,7 +45,7 @@
 
 .container-1{
     padding: 1%;
-    border-right: 1px solid rgb(195, 255, 200); ;
+    border-right: 1px solid rgb(195, 255, 200);
 }
 
 .container-2 {
@@ -71,16 +76,16 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-evenly;
-    gap: 1.5em;
+    justify-content: center;
+    height: 170px;
   }
 
   .write, .del {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:2em;
-    
+    gap:1em;
+
   }
 
   .login-db, .password-db, .remove-db {
@@ -90,16 +95,13 @@
     gap: 1em;
     border-bottom: 1px solid rgba(156, 255, 153, 0.418);
     width: 100%;
+    transform: scale(0.1);
+    animation: zoomIn 0.3s forwards; 
+
   }
 
   .tableData {
    width: 100%;
-  }
-
-  tr {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
   }
 
   input::placeholder{
@@ -114,10 +116,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    gap: 1em;
+    width: 50%;
+    color: rgb(195, 255, 200);
+  }
+
+  .write-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     gap: 1em;
   }
 
+  .delete {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+  }
 
+  tr {
+    text-align: center;
+  }
 
 
   @keyframes expandOut {
@@ -130,11 +153,10 @@
       height: auto;
     }
   }
-  
-  .fade-in {
-    animation: fadeInAnimation 0.3s ease-in;
+  .fade-in{
+    animation: fadeInAnimation 0.5s forwards;
   }
-  
+
   @keyframes fadeInAnimation {
     0% {
       opacity: 0;
@@ -144,10 +166,41 @@
     }
   }
 
+    @keyframes zoomIn {
+    to {
+      transform: scale(1);
+    }
+  }
+
   @media (max-width: 960px) {
     .db-write-del{
       display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 70%;
+      gap: 2em;
+      height: auto;
     }
+
+    .project-panel-opened{
+      width: 100%;
+    }
+
+    .invisible {
+      opacity: 0;
+      transition: opacity 0.5s ease; 
+  }
+
+    @keyframes expandOut {
+      0% {
+          width: 0;
+          height: 0;
+      }
+      100% {
+          width: 90%;
+          height: auto;
+      }
+  }
+ 
   }
   

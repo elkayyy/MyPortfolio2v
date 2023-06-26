@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
-import { writeToDatabase, deleteUserFromDatabase} from '../../../../../config/LoginScripts';
+import { writeToDatabase, deleteUserFromDatabase } from '../../../../../config/LoginScripts';
 import '../ProjectPanel.css'
 
-const WriteDelete = ({userList}) => {
+const WriteDelete = ({ userList }) => {
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('');
@@ -13,6 +13,7 @@ const WriteDelete = ({userList}) => {
     const [emptyInputError, setEmptyInputError] = useState(false);
     const [emptyInputErrorDel, setEmptyInputErrorDel] = useState(false);
 
+    
     const handleCheckCredentials = () => {
         if (!login || !password) {
             setEmptyInputError(true);
@@ -53,43 +54,56 @@ const WriteDelete = ({userList}) => {
 
     const toggleAddUser = () => {
         setShowAddUser(!showAddUser);
+        if (showAddUser) {
+            setUserId('');
+            setPassword('');
+            setEmptyInputError(false);
+        }
 
     };
 
+  
     return (
-       
+
         <div className='db-write-del'>
 
             <div className='write-container'>
                 <div className='write'>
-                    <div className='login-db fade-in' style={{ display: showAddUser ? 'block' : 'none' }}>
+                   
+                    <div className='login-db' style={{ display: showAddUser ? '' : 'none' }}>
+                    <label htmlFor='login-input'>Username</label>
                         <input
+                            id='login-input'
                             type='text'
-                            placeholder='username'
+                            placeholder=''
                             onChange={(e) => setLogin(e.target.value)}
                             value={login}
                             style={{ textAlign: 'left' }}
                         />
-                    </div>
-                    <div className='password-db fade-in' style={{ display: showAddUser ? 'block' : 'none' }}>
 
+                    </div>
+                   
+                    <div className='password-db' style={{ display: showAddUser ? '' : 'none' }}>
+                    <label htmlFor='password-input' className='password-label'>Password</label>
                         <input
+                            id='password-input'
                             type='password'
-                            placeholder='password'
+                            placeholder=''
                             onChange={(e) => setPassword(e.target.value)}
                             value={password}
                             style={{ textAlign: 'left' }}
                         />
+
                     </div>
                     {emptyInputError && <div><span className="write-msg fade-in">Invalid User/Pass.</span></div>}
                     <div className='main-button'>
                         {showAddUser && (
-                            <button className='main-btn fade-infade-in' onClick={handleCheckCredentials}>
+                            <button className='main-btn' onClick={handleCheckCredentials}>
                                 Confirm
                             </button>
                         )}
-                        <button className='main-btn fade-in' onClick={toggleAddUser}>
-                            {showAddUser ? 'Cancel' : 'Add'}
+                        <button className='main-btn' onClick={toggleAddUser}>
+                            {showAddUser ? 'Cancel' : 'Add User'}
                         </button>
 
                     </div>
@@ -97,26 +111,29 @@ const WriteDelete = ({userList}) => {
             </div>
 
             <div className='delete-container'>
-                {showDelete && (<div className='remove-db fade-in'>
-
+                <div className='delete'>
+                {showDelete && (<div className='remove-db'>
+                    <label htmlFor='delete-input'>Delete</label>
                     <input
+                        id='delete-input'
                         type='text'
                         onChange={(e) => setUserId(e.target.value)}
                         value={userId}
                         style={{ textAlign: 'left' }}
                     />
+
                 </div>)}
-                {emptyInputErrorDel && <div> <span className='del-msg fade-in '>Wrong Username</span></div>}
+                {emptyInputErrorDel && <div> <span className='del-msg'>Wrong Username</span></div>}
                 {showDelete && (
-                    <button className='main-btn fade-in' onClick={handleDeletion}>
+                    <button className='main-btn' onClick={handleDeletion}>
                         Confirm
                     </button>
 
                 )}
-                <button className='main-btn fade-in' onClick={toggleDelete}>
+                <button className='main-btn' onClick={toggleDelete}>
                     {showDelete ? 'Cancel' : 'Delete'}
                 </button>
-
+                </div>
 
             </div>
 

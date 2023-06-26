@@ -47,15 +47,17 @@ const ProjectOne = () => {
             <div className='project-main-login'>
               <div className='main-login'>
                 <div className='login'>
-                  <label className='label'>Login</label>
+                  <label htmlFor='login-input-main' className='label'>Login</label>
                   <input
+                    id='login-input-main'
                     type='text'
                     onChange={(e) => setLogin(e.target.value)}
                   />
                 </div>
                 <div className='password'>
-                  <label className='label'>Password</label>
+                  <label htmlFor='password-input-main' className='label'>Password</label>
                   <input
+                    id='password-input-main'
                     type='password'
                     onChange={(e) => setPassword(e.target.value)}
                   />

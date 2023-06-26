@@ -6,7 +6,7 @@ import '../ProjectPanel/ProjectPanel.css'
 
 const ProjectPanel = ({ logged, onLogout }) => {
     const [userList, setUserList] = useState([]);
-
+   
     useEffect(() => {
 
         const fetchUserList = async () => {
@@ -22,14 +22,15 @@ const ProjectPanel = ({ logged, onLogout }) => {
     }, [userList]);
 
 
+    
     return (
-        <div className='project-panel-main'>
+        <div className='project-container-main'>
             <div className='project-panel-opened'>
 
                 <div className='container-2'>
 
-                    <span>Welcome to the main Panel </span>
-                    <span>This small project is to show some basic CRUD operations using Firebase as a database. Real-time database is
+                    <span style={{fontSize:'20px', fontFamily:'sans-serif'}}>Welcome to the main Panel </span>
+                    <span style={{fontSize:'15px',fontFamily:'sans-serif'}}>This small project is to show some basic CRUD operations using Firebase as a database. Real-time database is
                         used to achieve that. The authentication method is a custom one and not one of the given options of firebase.
                     </span>
                     <WriteDelete userList={userList} />
@@ -39,7 +40,6 @@ const ProjectPanel = ({ logged, onLogout }) => {
 
                 <div className='container-1'>
                     <div className='user-list'>
-                        <span>User List</span>
                         <UserList userList={userList} logged={logged} />
                     </div>
                 </div>

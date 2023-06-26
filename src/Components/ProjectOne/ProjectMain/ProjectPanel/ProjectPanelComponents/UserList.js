@@ -4,34 +4,28 @@ import './../ProjectPanel.css'
 const UserList = ({ userList, logged}) => {
     return (
         <table className='tableData'>
-        <thead>
+        <thead className='thread-data'>
             <tr>
-                <th style={{ textAlign: 'start' }}>{userList.map((user, index) => (
-                    user.login !== logged ? (
-                        <li className='fade-in' key={index}>Username: {user.login}</li>
-                    ) : null
-                ))}</th>
-                <th style={{ textAlign: 'start' }}>{userList.map((user, index) => (
-                    user.login !== logged ? (
-                        <li className='fade-in' key={index}>Password: {user.password}</li>
-                    ) : null
-                ))}</th>
-                <th style={{ textAlign: 'start' }}>{userList.map((user, index) => (
-                    user.login !== logged ? (
-                        <li className='fade-in' key={index}>Date: {user.dateString}</li>
-                    ) : null
-                ))}</th>
-                <th style={{ textAlign: 'start' }}>{userList.map((user, index) => (
-                    user.login !== logged ? (
-                        <li className='fade-in'> Status : Live!</li>
-                    ) : null
-                ))}</th>
-
-
-
+                <th>Username</th>
+                <th>Password</th>
+                <th>Registered</th>
+                <th>Status</th> 
+                
             </tr>
         </thead>
-
+        <tbody>
+            <tr style={{height:'5px'}}></tr>
+            {userList.map((user, index) => (
+                user.login !== logged ? (
+                    <tr key={index}>
+                        <td className='fade-in'>{user.login}</td>
+                        <td className='fade-in'>{user.password}</td>
+                        <td className='fade-in'>{user.dateString}</td>
+                        <td className='fade-in'>Live!</td>
+                    </tr>
+                ) : null
+            ))}
+        </tbody>
     </table>
     )
 };
