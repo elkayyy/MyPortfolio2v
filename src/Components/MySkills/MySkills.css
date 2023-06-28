@@ -21,11 +21,11 @@
   display: none;
 }
 
-.shape4.hovered svg, .shape4.hovered span {
+.shape4:hover svg, .shape4:hover span {
   display: unset;
 }
 
-.shape4.hovered {
+.shape4:hover {
     animation: none;
     padding: 2%;
     width: 50%;
@@ -91,18 +91,32 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+   
    }
 
-   .shape4.hovered {
+   .shape4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2em;
     padding: 1.5em;
+    animation: none;
+    padding: 2%;
+    width: 80%;
+    height: auto;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom, rgba(129, 67, 243, 0.123), rgba(78, 10, 109, 0.055));
    
    
   }
 
+  .shape4 svg, .shape4 span  {
+    display: unset;
+    
+  }
+  .background-skills{
+    display: none;
+  }
 }
 
 

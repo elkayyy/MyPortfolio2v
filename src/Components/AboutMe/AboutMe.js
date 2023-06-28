@@ -1,16 +1,12 @@
 import React from 'react'
 import './AboutMe.css'
-import { useState } from 'react';
 
 const AboutMe = () => {
-
-    const [isHovered, setIsHovered] = useState(false);
-  
+    
     return (
 
         <div className='container-shape2'>
-            <div className={`shape2 ${isHovered ? 'hovered' : ''}`}
-                onMouseEnter={() => setIsHovered(true)}
+            <div className='shape2'
             >
                 <div className="my-info"><span style={{fontFamily:'sans-serif'}}>By completing a bachelor's degree in CS, I have a strong foundation in programming,
                     algorithms, and software design. With a passion for creating visually appealing and user-friendly web interfaces,

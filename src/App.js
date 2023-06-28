@@ -1,5 +1,4 @@
 import './App.css';
-import Background from './Components/Background/Background';
 import Introduction from './Components/Introduction/Introduction';
 import MySkills from './Components/MySkills/MySkills';
 import AboutMe from './Components/AboutMe/AboutMe';
@@ -15,7 +14,6 @@ function App() {
   <Introduction/>
   <FloorAnimation variable={1.5}/>
   <AboutMe/>
-  <Background/>
   <FloorAnimation variable={1.7}/>
   <MySkills/>
   <FloorAnimation variable={2}/>

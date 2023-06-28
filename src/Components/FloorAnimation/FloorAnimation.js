@@ -6,6 +6,7 @@ const FloorAnimation = ({variable}) => {
     return (
         <div className='container-shape3'>
                 <div className='shape3'
+               
                 style={{
                     animation: `slide-in ${variable}s forwards`,
                     width: '100%',
@@ -15,10 +16,7 @@ const FloorAnimation = ({variable}) => {
                     marginTop: '1%',
                     clipPath: 'polygon(6% 14%, 77% 9%, 83% 42%, 7% 50%)',
                   }}
-                >
-                 
-                       
-                
+                >    
                 </div>
                     
         </div>
